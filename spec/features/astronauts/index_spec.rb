@@ -18,7 +18,7 @@ describe 'as a visitor' do
           expect(page).to_not have_content("Job: #{buzz.job}")
         end
 
-        within "#book-#{buzz.id}" do
+        within "#astronaut-#{buzz.id}" do
 
           expect(page).to have_content(buzz.name)
           expect(page).to have_content("Job: #{buzz.job}")
@@ -26,6 +26,8 @@ describe 'as a visitor' do
 
           expect(page).to_not have_content("Age: #{neil.age}")
           expect(page).to_not have_content("Job: #{neil.job}")
+          save_and_open_page
+          
         end
 
       end
