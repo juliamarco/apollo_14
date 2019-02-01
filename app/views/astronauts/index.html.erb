@@ -3,6 +3,9 @@
     <h3><%= astronaut.name %></h3>
       <p>Age: <%= astronaut.age %></p>
       <p>Job: <%= astronaut.job %></p>
+      <% astronaut.missions.each do |mission| %>
+        <h5 id="space-missions-<%= astronaut.id %>"><%= mission.title %></h5>
+      <% end %>
   </section>
 <% end %>
 <section id="average-age">
