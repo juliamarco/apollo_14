@@ -35,9 +35,11 @@ describe 'as a visitor' do
 
       visit astronauts_path
 
-      within "#average_age" do
+      within "#average-age" do
 
         expect(page).to have_content(46)
+        save_and_open_page
+        
       end
     end
 
